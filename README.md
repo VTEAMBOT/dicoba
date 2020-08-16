@@ -1,0 +1,2 @@
+# dicoba
+Gosah kepo njing
