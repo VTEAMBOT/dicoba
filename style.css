@@ -2,11 +2,12 @@ html{
     font-size: 11px;
 }
 
-body{
-  background: url(belajarbersama.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-  background-attachment: fixed;
+body {
+  background: -webkit-linear-gradient(200deg, #00FFFF, #00FF00);
+  background: linear-gradient(205deg, #00C4FF, #9D1BB2);
+  height: 100vh;
+  margin: 0; 
+  padding: 0;
 }
 
 .dark {
