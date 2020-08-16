@@ -2,12 +2,11 @@ html{
     font-size: 11px;
 }
 
-body {
-  background: -webkit-linear-gradient(200deg, #00C4FF, #9D1BB2);
-  background: linear-gradient(205deg, #00C4FF, #9D1BB2);
-  height: 100vh;
-  margin: 0; 
-  padding: 0;
+body{
+  background: url(xeberlhyn.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .dark {
