@@ -185,7 +185,7 @@ a.bttn:focus {
   opacity: 0;
   content: '';
   background-color: #DC143Ccc;
-  border-radius: 10px;
+  border-radius: 9px;
   z-index: -2;
 }
 .bttn:hover:before {
