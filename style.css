@@ -147,7 +147,7 @@ body{
 
 a.bttn {
   color: #FFFF00cc;
-  text-decoration: none;
+  text-decoration: underline;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
 }
@@ -165,6 +165,7 @@ a.bttn:focus {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
+  text-decoration: underline;
   width: 270px;
   font-weight: bold;
   padding: 5px 0px;
