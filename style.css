@@ -183,7 +183,7 @@ a.bttn:focus {
   bottom: 0;
   opacity: 0;
   content: '';
-  background-color: #ff0000cc;
+  background-color: #ffff00;
   z-index: -2;
 }
 .bttn:hover:before {
