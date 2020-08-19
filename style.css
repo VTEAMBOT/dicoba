@@ -26,9 +26,9 @@ body{
 }
 
 .button {
-    background-color: #bababa; /* Green */
+    background-color: #00ffff; /* Green */
     border: none;
-    color: white;
+    color: red;
     padding: 8px 42px;
     text-align: center;
     text-decoration: none;
