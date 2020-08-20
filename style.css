@@ -52,7 +52,7 @@ b.bttn:focus {
   font-size: 11px;
   letter-spacing: 3px;
   text-align: center;
-  text-style: italic;
+  font-style: italic;
   display: inline-block;
   width: 300px;
   font-weight: bold;
