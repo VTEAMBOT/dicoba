@@ -36,7 +36,7 @@ body{
 
 b.bssn {
   color: #FFFF00cc;
-  text-style: none;
+  text-style: italic;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
 }
@@ -48,14 +48,11 @@ b.bttn:focus {
 }
 
 .bssn {
-
+  font-family: "Open Sans", sans-serif;
   font-size: 10px;
   letter-spacing: 3px;
-  text-transform: uppercase;
-  display: inline-block;
   text-align: center;
-  text-style: none;
-
+  text-style: italic;
   width: 300px;
   font-weight: bold;
   text-gravity: top;
