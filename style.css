@@ -48,14 +48,14 @@ b.bttn:focus {
 }
 
 .bssn {
-  font-family: "Open Sans", sans-serif;
+
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
   text-style: none;
-  text: "ini hanya uji coba saja dulu";
+
   width: 300px;
   font-weight: bold;
   text-gravity: top;
