@@ -54,7 +54,7 @@ b.bttn:focus {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  text-decoration: underline;
+  text-style: italic;
   width: 300px;
   font-weight: bold;
   text-gravity: top;
