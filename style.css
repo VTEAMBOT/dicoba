@@ -35,16 +35,16 @@ body{
 }
 
 b.bssn {
-  color: #FFFF00cc;
-  text-style: italic;
+  color: #FF0000;
+  text-style: normal;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
 }
 b.bssn:hover {
-  color: #00FF00cc;
+  color: #00FF00;
 }
 b.bttn:focus {
-  color: #00FF00cc;
+  color: #00FF00;
 }
 
 .bssn {
@@ -52,7 +52,7 @@ b.bttn:focus {
   font-size: 11px;
   letter-spacing: 3px;
   text-align: center;
-  font-style: italic;
+  font-style: normal;
   display: inline-block;
   width: 300px;
   font-weight: bold;
