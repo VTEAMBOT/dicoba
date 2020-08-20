@@ -62,6 +62,7 @@ b.bttn:focus {
   border: 3px solid #9933FF;
   border-radius: 10px;
   position: relative;
+  background-color: #708090cc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 .bssn:before {
