@@ -128,7 +128,7 @@ a.bttn:focus {
 
 .bttn {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
   display: inline-block;
