@@ -2,6 +2,31 @@ html{
     font-size: 11px;
 }
 
+.peopleteam {
+  display: inline-block;
+  width: 300px;
+  padding: 15px 0px;
+  border: 3px solid #9933FF;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.peopleteam:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #0000FF;
+  border-radius: 3px;
+  z-index: -2;
+}
+
+
 .hidden{
   visibility:hidden;
 }
