@@ -20,7 +20,7 @@ html{
 body{
   background: url(xeberlhyn.jpg);
   background-repeat: repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
 }
 
