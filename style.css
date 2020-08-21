@@ -13,6 +13,82 @@ html{
   
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+f.bkkn {
+  color: #FF0000cc;
+  text-style: normal;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
+f.bkkn:hover {
+  color: #FFFF00cc;
+}
+f.bkkn:focus {
+  color: #FFFF00cc;
+}
+
+.bkkn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-align: center;
+  font-style: normal;
+  display: inline-block;
+  width: 312px;
+  font-weight: bold;
+  text-gravity: top;
+  text-wrap: true;
+  padding: 5px 0px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  position: relative;
+}
+.bkkn:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: transparent;
+  border-radius: 9px;
+  z-index: -2;
+}
+.bkkn:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.bkkn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.layang {
+    position:fixed;
+    right:5px;
+    top:10px;
+}
+
 
 .hidden{
   visibility:hidden;
