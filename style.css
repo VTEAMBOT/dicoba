@@ -2,6 +2,9 @@ html{
     font-size: 11px;
 }
 
+.hidden{
+  visibility:hidden;
+}
 body{
   background: url(xeberlhyn.jpg);
   background-repeat: repeat;
