@@ -79,7 +79,7 @@ b.bttn:focus {
   border-radius: 10px;
   position: relative;
 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  
 }
 .bssn:before {
   -webkit-transition: 0.5s all ease;
