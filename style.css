@@ -6,9 +6,9 @@ html{
   display: inline-block;
   width: 310px;
   padding: 0px 0px;
-  border: 2px solid #0000ff;
+  border: 1px solid #00ff00cc;
   background-color: #9933FFcc;
-  border-radius: 3px;
+  border-radius: 2px;
   position: relative;
   
 }
@@ -127,16 +127,16 @@ body{
 }
 
 b.bssn {
-  color: #FF0000;
+  color: #00FF00;
   text-style: normal;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
 }
 b.bssn:hover {
-  color: #00FF00;
+  color: #00FFFF;
 }
 b.bttn:focus {
-  color: #00FF00;
+  color: #00FFFF;
 }
 
 .bssn {
