@@ -1,7 +1,7 @@
 window.onload = function() {
     const useNodeJS = false; 
-    const defaultLiffId = "2001802457-n2KbaYwM";
-    let myLiffId = "2001802457-n2KbaYwM";
+    const defaultLiffId = "2001802457-wQ1nlNXP";
+    let myLiffId = "2001802457-wQ1nlNXP";
 
     if (useNodeJS) {
         fetch('/liff/send-id', {
@@ -45,7 +45,7 @@ function sendLiff(){
             type: 'text',
             text: getParameterByName('text'),
             sentBy: {
-                label: "𝐕 𝐓 ΞΛ𝐌",
+                label: "©𝐕𝐓𝐄𝐀𝐌•𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭-𝟐𝟎𝟐𝟑",
                 iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
                 linkUrl: "https://vinsenteam.github.io"
             }
@@ -58,7 +58,7 @@ function sendLiff(){
             originalContentUrl: getParameterByName('img'),
             previewImageUrl: getParameterByName('img'),
             sentBy: {
-                label: "𝐕 𝐓 ΞΛ𝐌",
+                label: "©𝐕𝐓𝐄𝐀𝐌•𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭-𝟐𝟎𝟐𝟑",
                 iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
                 linkUrl: "https://vinsenteam.github.io"
             }
