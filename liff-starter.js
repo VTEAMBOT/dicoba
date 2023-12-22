@@ -111,28 +111,13 @@ function meProfile(){
         }
         if (tipe === 'profile') {
             liff.sendMessages([{
-                type: "template",
-                altText: "Profile "+prof.displayName,
-                template: {
-                    type: "buttons",
-                    thumbnailImageUrl: prof.pictureUrl,
-                    imageAspectRatio: "square",
-                    imageSize: "cover",
-                    title: "User Name:\n    "+prof.displayName,
-                    text: "User Status:\n    "+stat,
-                    actions: [
-                        {
-                            type:"uri",
-                            label:"Me",
-                            uri:"line://app/2001802457-wQ1nlNXP?type=profile"
-                        },
-                        {
-                            type:"uri",
-                            label:"Creators",
-                            uri:"line://app/2001802457-wQ1nlNXP?type=profile"
-                        }
-                    ]
-                }
+                type: "flex",
+                altText: "𝗟𝗜𝗙𝗙 𝗣𝗥𝗢𝗙𝗜𝗟𝗘 𝗧𝗘𝗠𝗣𝗟𝗔𝗧𝗘• 𝐕 𝐓 ΞΛ𝐌",
+                contents: { "type": "bubble", "body": { "type": "box", "layout": "vertical", "contents": [ { "type": "text", "text": "Isi datanya asw !!!", "wrap": true, "color": "#000000", "size" : "sm" } ] } }
+
+
+
+
             }]).then(function () {liff.closeWindow()})}})
 }
 
