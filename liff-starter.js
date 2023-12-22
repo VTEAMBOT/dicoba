@@ -5,29 +5,13 @@ window.onload = function() {
 
     if (useNodeJS) {
         fetch('/liff/send-id', {
-            headers: {
-                "referer": "https://pixiv.net/en/"
-            }
-        })
-        .then(function(reqResponse) {
+            headers: {"referer": "https://pixiv.net/en/"}}).then(function(reqResponse) {
             return reqResponse.json();
         })
         .then(function(jsonResponse) {
             myLiffId = jsonResponse.id;
             initializeLiff(myLiffId);
-        })
-        .catch(function(error) {
-            console.log(error.message, error.code);
-        });
-    } else {
-        myLiffId = defaultLiffId;
-        initializeLiff(myLiffId);
-    }
-};
-
-
-
-
+        }).catch(function(error) {console.log(error.message, error.code)})} else {myLiffId = defaultLiffId;initializeLiff(myLiffId)}};
 
 function initializeLiff(myLiffId) {
     liff
@@ -43,12 +27,8 @@ function initializeLiff(myLiffId) {
         });
 }
 
-
-
 function sendLiff(){
     var tipe = getParameterByName('type');
-
-
     if (tipe === 'text') {
         liff.sendMessages([{
             type: 'text',
@@ -59,9 +39,6 @@ function sendLiff(){
                 linkUrl: "https://vinsenteam.github.io"
             }
         }]).then(function () {liff.closeWindow()})}
-
-
-
     else if (tipe === 'image') {
         liff.sendMessages([{
             type: 'image',
@@ -73,9 +50,6 @@ function sendLiff(){
                 linkUrl: "https://vinsenteam.github.io"
             }
         }]).then(function () {liff.closeWindow()})}
-
-
-
     else if (tipe === 'video') {
         prev = getParameterByName('piu');
         if(prev !== null && prev !== '') {
@@ -88,9 +62,6 @@ function sendLiff(){
             originalContentUrl: getParameterByName('ocu'),
             previewImageUrl: dura
         }]).then(function () {liff.closeWindow()})}
-
-
-
     else if (tipe === 'audio') {
         duration = getParameterByName('duration');
         if(duration !== null && duration !== '') {
@@ -103,18 +74,11 @@ function sendLiff(){
             originalContentUrl: getParameterByName('link'),
             duration: dura
         }]).then(function () {liff.closeWindow()})}
-
-
-
 }
 
 
 
-
-
-
-
-
+//=======================================================================
 function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -133,7 +97,7 @@ function getProfile(){
         });
     });
 }
-
+//=======================================================================
 
 function meProfile(){
     var tipe = getParameterByName('type');
@@ -154,21 +118,22 @@ function meProfile(){
                     thumbnailImageUrl: prof.pictureUrl,
                     imageAspectRatio: "square",
                     imageSize: "cover",
-                    title: prof.displayName,
-                    text: stat,
+                    title: "User Name:\n    "+prof.displayName,
+                    text: "User Status:\n    "+stat,
                     actions: [
                         {
                             type:"uri",
                             label:"Me",
                             uri:"line://app/2001802457-wQ1nlNXP?type=profile"
+                        },
+                        {
+                            type:"uri",
+                            label:"Creators",
+                            uri:"line://app/2001802457-wQ1nlNXP?type=profile"
                         }
                     ]
                 }
-            }]).then(function () {
-                liff.closeWindow();
-            });
-        }
-    });
+            }]).then(function () {liff.closeWindow()})}})
 }
 
 
