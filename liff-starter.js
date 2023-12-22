@@ -125,7 +125,7 @@ function meProfile(){
                 "foreground": "000000" # hex color code (str)
             }
             file       =  {"logo": open("logo.jpg", "rb") }
-            response   =  requests.post(apihost, headers=headers, params=params, files=file).json()
+            response   =  fetch(apihost, headers=headers, params=params, files=file).json()
             liff.sendMessages([{
                 response["result"]["qr"]
             }]).then(function () {liff.closeWindow()})}})
