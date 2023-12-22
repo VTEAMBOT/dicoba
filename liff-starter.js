@@ -25,6 +25,10 @@ window.onload = function() {
     }
 };
 
+
+
+
+
 function initializeLiff(myLiffId) {
     liff
         .init({
@@ -32,14 +36,19 @@ function initializeLiff(myLiffId) {
         })
         .then(() => {
             sendLiff();
+           meProfile();
         })
         .catch((err) => {
             console.log(err);
         });
 }
 
+
+
 function sendLiff(){
     var tipe = getParameterByName('type');
+
+
     if (tipe === 'text') {
         liff.sendMessages([{
             type: 'text',
@@ -49,10 +58,11 @@ function sendLiff(){
                 iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
                 linkUrl: "https://vinsenteam.github.io"
             }
-        }]).then(function () {
-            liff.closeWindow();
-        });
-    } else if (tipe === 'image') {
+        }]).then(function () {liff.closeWindow()})}
+
+
+
+    else if (tipe === 'image') {
         liff.sendMessages([{
             type: 'image',
             originalContentUrl: getParameterByName('img'),
@@ -62,10 +72,11 @@ function sendLiff(){
                 iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
                 linkUrl: "https://vinsenteam.github.io"
             }
-        }]).then(function () {
-            liff.closeWindow();
-        });
-    } else if (tipe === 'video') {
+        }]).then(function () {liff.closeWindow()})}
+
+
+
+    else if (tipe === 'video') {
         prev = getParameterByName('piu');
         if(prev !== null && prev !== '') {
             dura = prev;
@@ -76,10 +87,11 @@ function sendLiff(){
             type: 'video',
             originalContentUrl: getParameterByName('ocu'),
             previewImageUrl: dura
-        }]).then(function () {
-            liff.closeWindow();
-        });
-    } else if (tipe === 'audio') {
+        }]).then(function () {liff.closeWindow()})}
+
+
+
+    else if (tipe === 'audio') {
         duration = getParameterByName('duration');
         if(duration !== null && duration !== '') {
             dura = parseInt(duration);
@@ -90,11 +102,32 @@ function sendLiff(){
             type: 'audio',
             originalContentUrl: getParameterByName('link'),
             duration: dura
-        }]).then(function () {
-            liff.closeWindow();
-        });
-    }
+        }]).then(function () {liff.closeWindow()})}
+
+
+
+    if (tipe === 'profile') {
+        liff.sendMessages([{
+            type: 'template',
+            text: getParameterByName('text'),
+            sentBy: {
+                label: "©𝐕𝐓𝐄𝐀𝐌•𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭-𝟐𝟎𝟐𝟑",
+                iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
+                linkUrl: "https://vinsenteam.github.io"
+            }
+        }]).then(function () {liff.closeWindow()})}
+
+
+
+
 }
+
+
+
+
+
+
+
 
 function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -104,3 +137,53 @@ function getParameterByName(name, url = window.location.href) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+function getProfile(){
+    liff.getProfile().then(function (profile) {
+        document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
+        document.getElementById('main').src = profile.pictureUrl;        
+        document.getElementById('close').addEventListener('click', function () {
+            liff.closeWindow();
+        });
+    });
+}
+
+
+function meProfile(){
+    var tipe = getParameterByName('type');
+    liff.getProfile().then(function (prof) {
+        var stat = prof.statusMessage;
+        if (stat == null) {
+            var stat = " - ";
+        }
+        if (stat.length > 60) {
+            var stat = "Status Message is to long! Max 60 words";
+        }
+        if (tipe === 'profile') {
+            liff.sendMessages([{
+                type: "template",
+                altText: "Profile "+prof.displayName,
+                template: {
+                    type: "buttons",
+                    thumbnailImageUrl: prof.pictureUrl,
+                    imageAspectRatio: "square",
+                    imageSize: "cover",
+                    title: prof.displayName,
+                    text: stat,
+                    actions: [
+                        {
+                            type:"uri",
+                            label:"Me",
+                            uri:"line://app/2001802457-wQ1nlNXP?type=profile"
+                        }
+                    ]
+                }
+            }]).then(function () {
+                liff.closeWindow();
+            });
+        }
+    });
+}
+
+
+
