@@ -116,7 +116,7 @@ function meProfile(){
 
         if (tipe === 'token') {
             apihost    =  "https://api.imjustgood.com/lineqr"
-            headers    =  {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/51.0.2704.106","Apikey": "Bebek89","appName": "DESKTOPWIN\t7.13.2\tWindows\t10.0","sysName": "VTEAM","cert": None}
+            headers    =  {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/51.0.2704.106","Apikey": "Bebek89","appName": "DESKTOPWIN\t7.13.2\tWindows\t10.0","sysName": "VTEAM","cert": none}
             params     =  {
                 "style": 2, # 1 or 2 // 1=square, 2=round (int)
                 "size": 500, # 100 - 500 (int)
