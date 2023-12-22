@@ -106,20 +106,6 @@ function sendLiff(){
 
 
 
-    if (tipe === 'profile') {
-        liff.sendMessages([{
-            type: 'template',
-            text: getParameterByName('text'),
-            sentBy: {
-                label: "©𝐕𝐓𝐄𝐀𝐌•𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭-𝟐𝟎𝟐𝟑",
-                iconUrl: "https://i.ibb.co/n7pzyGj/20220308-173553.jpg",
-                linkUrl: "https://vinsenteam.github.io"
-            }
-        }]).then(function () {liff.closeWindow()})}
-
-
-
-
 }
 
 
